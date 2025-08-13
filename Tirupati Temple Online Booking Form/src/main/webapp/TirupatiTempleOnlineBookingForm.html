@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tirupati Temple Darshan Booking Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card {
+      max-width: 800px;
+      margin: auto;
+    }
+    .form-header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .form-header img {
+      width: 60px;
+    }
+  </style>
+</head>
+<body class="bg-light py-5">
+
+  <div class="card shadow rounded p-4">
+    <div class="form-header">
+      <img src="https://via.placeholder.com/60x60?text=🛕" alt="Temple Logo">
+      <h2 class="mt-2">Tirupati Temple Darshan Booking Form</h2>
+    </div>
+
+    <form class="needs-validation" novalidate>
+      <div class="row g-3">
+
+        <!-- Full Name -->
+        <div class="col-md-6">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullName" required>
+          <div class="invalid-feedback">Please enter your full name.</div>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" required>
+          <div class="invalid-feedback">Please enter a valid email.</div>
+        </div>
+
+        <!-- Mobile Number with Input Group -->
+        <div class="col-md-6">
+          <label for="mobile" class="form-label">Mobile Number</label>
+          <div class="input-group">
+            <span class="input-group-text">+91</span>
+            <input type="tel" class="form-control" id="mobile" pattern="[0-9]{10}" required>
+            <div class="invalid-feedback">Enter a 10-digit mobile number.</div>
+          </div>
+        </div>
+
+        <!-- Gender -->
+        <div class="col-md-6">
+          <label class="form-label d-block">Gender</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="male" required>
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="female">
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="other">
+            <label class="form-check-label" for="other">Other</label>
+          </div>
+        </div>
+
+        <!-- Darshan Date -->
+        <div class="col-md-6">
+          <label for="date" class="form-label">Darshan Date</label>
+          <input type="date" class="form-control" id="date" required>
+        </div>
+
+        <!-- Darshan Time Slot -->
+        <div class="col-md-6">
+          <label for="timeSlot" class="form-label">Darshan Time Slot</label>
+          <select class="form-select" id="timeSlot" required>
+            <option value="">Choose...</option>
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Evening</option>
+          </select>
+        </div>
+
+        <!-- Number of Tickets with form-floating -->
+        <div class="col-md-6 form-floating">
+          <input type="number" class="form-control" id="tickets" min="1" max="10" placeholder="Number of Tickets" required>
+          <label for="tickets">Number of Tickets</label>
+        </div>
+
+        <!-- Seva Type -->
+        <div class="col-md-6">
+          <label class="form-label">Seva Type</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="archana">
+            <label class="form-check-label" for="archana">Archana</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="abhishekam">
+            <label class="form-check-label" for="abhishekam">Abhishekam</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="special">
+            <label class="form-check-label" for="special">Special Entry Darshan</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="suprabhata">
+            <label class="form-check-label" for="suprabhata">Suprabhata Seva</label>
+          </div>
+        </div>
+
+        <!-- ID Proof Upload with Tooltip -->
+        <div class="col-md-6">
+          <label for="idProof" class="form-label">ID Proof Upload 
+            <span data-bs-toggle="tooltip" title="Accepted formats: JPG, PNG, PDF">
+              🛈
+            </span>
+          </label>
+          <input type="file" class="form-control" id="idProof" accept=".jpg,.png,.pdf" required>
+        </div>
+
+        <!-- Address -->
+        <div class="col-12">
+          <label for="address" class="form-label">Address</label>
+          <textarea class="form-control" id="address" rows="3" required></textarea>
+        </div>
+
+        <!-- Buttons -->
+        <div class="col-12 d-grid gap-2 mt-4">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal Popup -->
+  <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bookingModalLabel">Booking Confirmed</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Your Tirupati Darshan Booking is Confirmed!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Enable tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(t => new bootstrap.Tooltip(t));
+
+    // Form validation and modal trigger
+    document.querySelector('form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (this.checkValidity()) {
+        const modal = new bootstrap.Modal(document.getElementById('bookingModal'));
+        modal.show();
+        this.classList.remove('was-validated');
+        this.reset();
+      } else {
+        this.classList.add('was-validated');
+      }
+    });
+  </script>
+</body>
+</html>
