@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tuition Catalog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card-title.math { color: #007bff; font-weight: bold; }
+    .card-title.science { color: #28a745; font-weight: bold; }
+    .card-title.english { color: #fd7e14; font-weight: bold; }
+    .btn-math { background-color: #007bff; color: white; }
+    .btn-science { background-color: #28a745; color: white; }
+    .btn-english { background-color: #fd7e14; color: white; }
+    .badge-custom { position: absolute; top: 10px; right: 10px; }
+  </style>
+</head>
+<body class="bg-light py-5">
+
+  <div class="container">
+    <h1 class="text-center mb-5">📘 Professional Tuition Catalog</h1>
+    <div class="row g-4">
+
+      <!-- Mathematics Card -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card shadow position-relative h-100">
+          <span class="badge bg-primary badge-custom">Best Seller</span>
+          <img src="https://via.placeholder.com/400x200?text=Mathematics" class="card-img-top" alt="Math Image">
+          <div class="card-body">
+            <h5 class="card-title math">Mathematics Tuition</h5>
+            <p class="card-text">Expert coaching for Class 8–12. Includes weekly tests, exam preparation, and doubt clearing.</p>
+            <ul class="list-unstyled">
+              <li><strong>Teacher:</strong> Mr. Raj Kumar</li>
+              <li><strong>Duration:</strong> 3 Months</li>
+              <li><strong>Fee:</strong> ₹5,000</li>
+            </ul>
+            <a href="#" class="btn btn-math mt-2">Enroll Now</a>
+          </div>
+          <div class="card-footer text-muted">Limited seats available!</div>
+        </div>
+      </div>
+
+      <!-- Science Card -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card shadow position-relative h-100">
+          <span class="badge bg-success badge-custom">Popular</span>
+          <img src="https://via.placeholder.com/400x200?text=Science" class="card-img-top" alt="Science Image">
+          <div class="card-body">
+            <h5 class="card-title science">Science Tuition</h5>
+            <p class="card-text">Covers Physics, Chemistry and Biology. Perfect for board & competitive exams.</p>
+            <ul class="list-unstyled">
+              <li><strong>Teacher:</strong> Mrs. Priya Sharma</li>
+              <li><strong>Duration:</strong> 4 Months</li>
+              <li><strong>Fee:</strong> ₹6,500</li>
+            </ul>
+            <a href="#" class="btn btn-science mt-2">Enroll Now</a>
+          </div>
+          <div class="card-footer text-muted">Hurry! Classes filling fast</div>
+        </div>
+      </div>
+
+      <!-- English Card -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card shadow position-relative h-100">
+          <span class="badge bg-warning text-dark badge-custom">New</span>
+          <img src="https://via.placeholder.com/400x200?text=English" class="card-img-top" alt="English Image">
+          <div class="card-body">
+            <h5 class="card-title english">English Tuition</h5>
+            <p class="card-text">Grammar, vocabulary, and speaking skills for school and professional needs.</p>
+            <ul class="list-unstyled">
+              <li><strong>Teacher:</strong> Mr. Anil Verma</li>
+              <li><strong>Duration:</strong> 2 Months</li>
+              <li><strong>Fee:</strong> ₹4,000</li>
+            </ul>
+            <a href="#" class="btn btn-english mt-2">Enroll Now</a>
+          </div>
+          <div class="card-footer text-muted">Weekend batches available</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
